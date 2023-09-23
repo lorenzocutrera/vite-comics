@@ -66,16 +66,13 @@ export default {
 
 .bottom {
     align-items: center;
-    height: 100px;
+    height: 150px;
     width: 100%;
     background-color: black;
 
     
 }
 
-h3{
-font-size: 10px;
-}
     
 
 </style>
