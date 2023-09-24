@@ -1,62 +1,63 @@
 <script>
 
 export default {
-    name: 'appMain'
+    name: 'appMain',
+    data() {
+        return{
+           menu : [
+            {
+                image: "/src/assets/comics-img/img/buy-comics-digital-comics.png",
+                title: 'DIGITAL COMICS'
+            },
+            {
+                image: "/src/assets/comics-img/img/buy-comics-merchandise.png",
+                title: 'DC MERCHANDISE'
+            },
+            {
+                image: "/src/assets/comics-img/img/buy-comics-subscriptions.png" ,
+                title: 'SUBSCRIPTION'
+            },
+            {
+                image: "/src/assets/comics-img/img/buy-comics-shop-locator.png"  ,
+                title: 'COMIC SHOP LOCATOR'
+            },
+            {
+                image: "/src/assets/comics-img/img/buy-dc-power-visa.svg" ,
+                title: 'DC POWER VISA'
+            },
+           ]
+        } 
+        
+    }
+
 }
 </script>
 
 <template>
+     <div class="bottom d-flex">
+        <div class="container">
+            <h3 style="color:white; font-size: 20px;"> -->Content goes here -- </h3>
+        </div>
+    </div>
+    <!-- menu -->
     <div class="menu d-flex">
         <div class="container">
-            <div class="row d-flex">
+            
+            <div  class="row d-flex">
 
-                <div class="col">
+                <div v-for="item in menu" class="col">
                     <div class="option d-flex">
-                        <img src="../assets/comics-img/img/buy-comics-digital-comics.png" alt="">
-                        <p class="d-flex">DIGITAL COMICS</p>
+                        <img v-bind:src="item.image" alt="">
+                
+                        <p class="d-flex">{{item.title}}</p>
                     </div>
                 </div>
 
-                <div class="col">
-                    <div class="option d-flex">
-                        <img src="../assets/comics-img/img/buy-comics-merchandise.png" alt="">
-                        <p class="d-flex">DIGITAL COMICS</p>
-                    </div>
-                    
-                </div>
-
-                <div class="col">
-                    <div class="option d-flex">
-                        <img src="../assets/comics-img/img/buy-comics-subscriptions.png" alt="">
-                        <p class="d-flex">DIGITAL COMICS</p>
-                    </div>
-                    
-                </div>
-
-                <div class="col">
-                    <div class="option d-flex">
-                        <img src="../assets/comics-img/img/buy-comics-shop-locator.png" alt="">
-                        <p class="d-flex">DIGITAL COMICS</p>
-                    </div>
-                    
-                </div>
-
-                <div class="col">
-                    <div class="option d-flex">
-                        <img src="../assets/comics-img/img/buy-dc-power-visa.svg" alt="">
-                        <p class="d-flex">DIGITAL COMICS</p>
-                    </div>
-                    
-                </div>
             </div>
         </div>
     </div>
 
-    <div class="main">
-        <div class="container">
-
-        </div>
-    </div>
+   
 </template>
 
 <style lang="scss">
@@ -68,11 +69,13 @@ export default {
 
 }
 
-.main {
+.bottom {
+    align-items: center;
+    height: 150px;
     width: 100%;
-    height: calc(100vh - 500px);
-    background-image: url(../assets/comics-img/img/footer-bg.jpg);
+    background-color: black;
 
+    
 }
 
 .option {

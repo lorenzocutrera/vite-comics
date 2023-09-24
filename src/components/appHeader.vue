@@ -1,12 +1,17 @@
 <script>
-
-
+import navBar from './navbar.vue'
 export default {
-    name: 'appHeader'
+    name: 'appHeader',
+    components: {
+        navBar
+    },
+    
 }
+
 </script>
 
 <template>
+
     <div class="top d-flex">
         <div class="container">
             <div class="row d-flex">
@@ -14,7 +19,11 @@ export default {
                     <img src="../assets/comics-img/img/dc-logo.png" alt="">
                 </div>
                 <div class="col">
-                    <a href="#">characters</a>
+
+                   
+                    <navBar></navBar>
+
+                    <!-- <a href="#">characters</a>
                     <a href="#">comics</a>
                     <a href="#">movie</a>
                     <a href="#">tv</a>
@@ -23,17 +32,13 @@ export default {
                     <a href="#">videos</a>
                     <a href="#">fans</a>
                     <a href="#">news</a>
-                    <a href="#">shop</a>
+                    <a href="#">shop</a> -->
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="bottom d-flex">
-        <div class="container">
-            <h3 style="color:white; font-size: 20px;"> -->Content goes here -- </h3>
-        </div>
-    </div>
+   
 </template>
 
 <style lang="scss">
@@ -64,14 +69,7 @@ export default {
     }
 }
 
-.bottom {
-    align-items: center;
-    height: 150px;
-    width: 100%;
-    background-color: black;
 
-    
-}
 
     
 
