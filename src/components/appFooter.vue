@@ -38,9 +38,9 @@ export default {
             <div class="liste d-flex">
                 <ul v-for="liste in menuFooter" class="menuFooter">
                     <li>{{ liste.title }}
-                        <ul v-for="item in liste.elements">
-                            <li><a href="#">{{ item }}</a></li>
-                        </ul>
+                    <li v-for="item in liste.elements">
+                        <a href="#">{{ item }}</a>
+                    </li>
                     </li>
                 </ul>
             </div>
@@ -48,7 +48,7 @@ export default {
             <div class="mainDC">
                 <img src="../assets/comics-img/img/dc-logo-bg.png" alt="">
             </div>
-     </div>
+        </div>
     </div>
     <footer>
         <div class="container">
@@ -71,7 +71,7 @@ export default {
 <style lang="scss">
 .main_footer {
     width: 100%;
-    height: calc(100vh - 500px);
+    height: 350px;
     background-image: url(../assets/comics-img/img/footer-bg.jpg);
     color: white;
 }
@@ -82,12 +82,16 @@ ul {
     a {
         text-decoration: none;
         color: #797979;
+        font-size: 14px;
+        
+        &:hover {
+            color: white;
+        }
     }
 }
 
 .menuFooter {
     display: flex;
-    flex-wrap: wrap;
 }
 
 footer {
@@ -119,4 +123,5 @@ button {
     img {
         padding: 10px;
     }
-}</style>
+}
+</style>

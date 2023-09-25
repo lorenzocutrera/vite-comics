@@ -1,7 +1,12 @@
 <script>
 
+import appContent from './appContent.vue'
+
 export default {
     name: 'appMain',
+    components: {
+        appContent
+    },
     data() {
         return{
            menu : [
@@ -34,11 +39,9 @@ export default {
 </script>
 
 <template>
-     <div class="bottom d-flex">
-        <div class="container">
-            <h3 style="color:white; font-size: 20px;"> -->Content goes here -- </h3>
-        </div>
-    </div>
+     
+    <appContent></appContent>
+
     <!-- menu -->
     <div class="menu d-flex">
         <div class="container">
@@ -69,7 +72,7 @@ export default {
 
 }
 
-.bottom {
+.content {
     align-items: center;
     height: 150px;
     width: 100%;
@@ -79,6 +82,7 @@ export default {
 }
 
 .option {
+    height: 100%;
 
     p {
         color: white;
