@@ -96,7 +96,7 @@ export default {
         <div class="container">
             <div class="row d-flex pt-5">
 
-                <div v-for="card in cards" class="card" style="width: 18rem;">
+                <div v-for="card in cards" class="card col-4 col" style="width: 18rem;">
                     <img v-bind:src="card.thumb" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text price"></p>
