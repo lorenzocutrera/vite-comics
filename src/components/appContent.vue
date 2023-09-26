@@ -96,7 +96,7 @@ export default {
         <div class="container">
             <div class="row d-flex pt-5">
 
-                <div v-for="card in cards" class="card col-4 col" style="width: 18rem;">
+                <div v-for="card in cards" class="card col col-md-2">
                     <img v-bind:src="card.thumb" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text price"></p>
@@ -119,10 +119,21 @@ export default {
     background-image: url(../assets/comics-img/img/jumbotron.jpg);
     background-size: cover;
 }
-
+.card-img-top{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
 .cards_container {
     width: 100%;
     min-height: 500px;
     background-color: #1c1c1c;
+    
 }
+.card{
+    background-color: transparent;
+}
+p{
+    color: white;
+}
+
 </style>
